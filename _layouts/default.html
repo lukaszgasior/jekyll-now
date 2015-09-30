@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  {% include meta.html %}
+	{% include meta.html %}
 
-  <link rel="shortcut icon" href="/assets/images/favicon.png">
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
 
-  <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">
+	<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">
 
-  <!-- Custom styles for our template -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-theme.css" media="screen">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
 	<script src="{{ site.baseurl }}/assets/js/html5shiv.js"></script>
 	<script src="{{ site.baseurl }}/assets/js/respond.min.js"></script>
 	<![endif]-->
 
-  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+	<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
 <body class="home">
@@ -49,19 +49,82 @@
 	</div>
 	<!-- /.navbar -->
 
-  <div id="main" role="main" class="container">
-    {{ content }}
-  </div>
+	<div id="main" role="main" class="container">
+		{{ content }}
+	</div>
 
-  <div class="wrapper-footer">
-    <div class="container">
-      <footer class="footer">
-        {% include svg-icons.html %}
-      </footer>
-    </div>
-  </div>
+	<footer id="footer" class="top-space">
 
-  {% include analytics.html %}
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Tools</h3>
+						<div class="widget-body">
+							<p>Based on <a href="http://www.gettemplate.com" target="_blank">Progressus</a>, free <a href="http://getbootstrap.com"
+								rel="nofollow" target="_blank">Bootstrap</a> template
+								<br/> Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow" target="_blank">Font Awesome</a></p>
+							<p>Keyboard shortcuts handling based on <a href="https://github.com/piranha/keymage" target="_blank">keymage</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="http://twitter.com/reshortcuts" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="https://github.com/reshortcuts/reshortcuts.github.io" target="_blank"><i class="fa fa-github fa-2"></i></a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title"></h3>
+						<div class="widget-body">
+
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="{{ site.baseurl }}/">Home</a> |
+								<a href="{{ site.baseurl }}/tips">Tips & trick</a> |
+								<a href="{{ site.baseurl }}/author">Author</a></b>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2015, Lukasz Gasior.
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+	{% include analytics.html %}
 </body>
 
 </html>
