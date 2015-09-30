@@ -5,6 +5,9 @@
 # Name of your site (displayed in the header)
 name: "Probably the best way to learn ReSharper shortcuts!"
 
+# Name of author
+author: "Lukasz Gasior (http://gasior.net.pl)"
+
 # Short bio or description (displayed in the header)
 description: "Learn ReSharper shortcuts with free, interactive exercises and useful tips & tricks!"
 

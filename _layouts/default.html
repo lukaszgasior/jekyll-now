@@ -2,11 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ReShortcuts: Easy way to learn ReSharper shortcuts!">
-  <meta name="author" content="Lukasz Gasior (http://gasior.net.pl)">
-
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
   {% include meta.html %}
@@ -30,25 +25,29 @@
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
-<body>
-  <div class="wrapper-masthead">
-    <div class="container">
-      <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-        <div class="site-info">
-          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <p class="site-description">{{ site.description }}</p>
-        </div>
-
-        <nav>
-          <a href="{{ site.baseurl }}/">Blog</a>
-          <a href="{{ site.baseurl }}/tips">Tips</a>
-          <a href="{{ site.baseurl }}/about">About</a>
-        </nav>
-      </header>
-    </div>
-  </div>
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="{{ site.baseurl }}/">ReShortcuts</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
+					<li class="active"><a href="{{ site.baseurl }}/how-does-it-work/">How does it work?</a></li>
+					<li class="active"><a href="http://twitter.com/reshortcuts" style="color:#FF9B22;" target="_blank">Follow me on <i class="fa fa-twitter fa-2"></i> Twitter!</a></li>
+					<li class="active"><a href="{{ site.baseurl }}/tips">Tips & trick</a></li>
+					<li class="active"><a href="{{ site.baseurl }}/author">Author</a></li>
+					<li class="active"><a class="btn" href="https://github.com/reshortcuts/reshortcuts.github.io" target="_blank">View on GitHub</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
 
   <div id="main" role="main" class="container">
     {{ content }}
