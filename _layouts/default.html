@@ -122,11 +122,45 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
+	{% if page.lesson-no %}
+	<div>
+		<div id="thankYou" class="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4 class="modal-title">CONGRATULATIONS!</h4>
+					</div>
+					<div class="modal-body">
+						<p>You've just completed Lesson {{ page.lesson-no }}!</p>
+						{% if page.next-lesson %}
+						<p>Now try <a href="{{ site.baseurl }}/lessons/{{ page.next-lesson }}/"><b>Lesson {{ page.next-lesson }}</b></a></p>
+						{% endif %}
+						<p>&nbsp;</p>
+						<p><a href="https://twitter.com/intent/tweet?text=%23ReShortcuts%20-%20Probably%20the%20best%20way%20to%20learn%20%23ReSharper%20shortcuts!%20http%3A%2F%2Freshortcuts.github.io"
+							target="_blank"><b>click here</b></a> and let your friends know about ReShortcuts!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+	</div>
+
 	<script src="{{ site.baseurl }}/scripts//keymage.js"></script>
 
 	<script src="{{ site.baseurl }}/scripts/lessonsProvider.js"></script>
 	<script src="{{ site.baseurl }}/scripts/lessonsManager.js"></script>
 
+	<script type="text/javascript">
+		$(document).ready(function(){
+               window.reShortcuts.lessonsManager().init({{ page.lesson-no }}); 
+            });
+	</script>
+	{% endif %}
+	
 	{% include analytics.html %}
 </body>
 
